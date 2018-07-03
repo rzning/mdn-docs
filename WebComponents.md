@@ -60,4 +60,15 @@ Custom elements | Shadow DOM | HTML Templates | HTML Imports
 4. 如果需要，使用 `<template>` 和 `<slot>` 定义一个 HTML template 并使用常规 DOM 方法克隆模板，将其附加到你的 shadow DOM 中。
 5. 在页面任何使用自定义元素，就像使用常规 HTML 元素一样。
 
+## Tutorials 教程
+
+- Using custom elements
+- Using shadow DOM
+- Using templates and slots
+
+---
+
+# Using custom elements
+
+- <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements>
 
