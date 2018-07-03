@@ -68,7 +68,63 @@ Custom elements | Shadow DOM | HTML Templates | HTML Imports
 
 ---
 
-# Using custom elements
+# Using custom elements 使用自定义元素
 
 - <https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements>
+
+Web Components 标准一个非常重要的特性是，使开发者能够在 HTML 页面中创建自定义元素来封装自己的功能，
+而不是必须使用一堆嵌套的元素来实现相同的功能。
+
+## 概述
+
+在 Web 文当中自定义元素的控制器是 `CustomElementRegistry` 对象。
+
+该对象允许你在页面中注册一个自定义元素，并返回相关注册信息等。
+
+```js
+/**
+ * 定义一个自定义元素
+ * @param {String} name 自定义元素名，自定义元素名称必须包含连字符。
+ * @param {Class} constructor 自定义元素的构造方法，用于定义元素行为。
+ * @param {Object} options 可选，配置对象，目前只有一个 `extends` 选项。
+ * @param {String} options.extends 指定所创建元素继承自哪个内置元素。
+ * @return void
+ */
+customElementRegistry.define(name, constructor, options)
+```
+
+下面例子定义了一个继承自 `<p>` 元素的自定义元素 `word-count`。
+
+```js
+class WordCount extends HTMLParagraphElement {
+  constructor() {
+    super();
+    //...
+  }
+}
+customElements.define('word-count', WordCount, { extends: 'p' });
+```
+```html
+<p is="word-count"></p>
+```
+
+你可以创建两种类型的自定义元素：
+
+### Autonomous custom element
+
+独立的元素，不会继承自内置 HTML 元素。
+
+可以直接写成标 HTML 签形式使用，如 `<popup-info>`，
+也可以调用 `document.createElement('popup-info')` 方法使用。
+
+### Customized built-in elememt
+
+定制的内置元素，此类元素继承并扩展了内置 HTML 元素。
+
+必须使用所继承的基本元素标签，并通过 `is` 属性指定自定义元素名称，如 `<p is="word-count">`，
+或者调用 `document.createElement('p', { is: 'word-count' })` 方法使用。
+
+## Simple Examples 简单示例
+
+
 
