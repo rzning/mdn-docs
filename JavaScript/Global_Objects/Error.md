@@ -1,6 +1,8 @@
 # Error
 
-- <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error>
+- [/docs/Web/JavaScript/Reference/Global_Objects/Error][Error]
+
+[Error]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error>
 
 Error 构造器用于创建一个错误对象。
 
