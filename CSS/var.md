@@ -25,7 +25,7 @@ var( <custom-property-name> , <declaration-value>? )
 
 ### 示例
 
-`var()` 函数的第一个 `,` 后面的所有内容都作为
+`var()` 函数的第一个 `,` 后面的所有内容都作为回退值。
 
 ```css
 :root {

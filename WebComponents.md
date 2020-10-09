@@ -2,8 +2,9 @@
 
 - <https://developer.mozilla.org/en-US/docs/Web/Web_Components>
 
-Web Components是一套不同的技术，
-允许您创建可重用的定制元素（它们的功能封装在您的代码之外）并且在您的web应用中使用它们。
+Web Components 是一套不同的技术，
+允许您创建可重用的定制元素（它们的功能封装在您的代码之外），
+并且在你的 Web 应用中使用它们。
 
 - Interfaces
   - CustomElementRegistry
@@ -38,18 +39,22 @@ Custom elements | Shadow DOM | HTML Templates | HTML Imports
 自定义元素 | 影子 DOM | HTML 模板 | HTML 导入
 
 ### Custom elements
+
 - 允许你定义其行为，然后在用户界面中使用它们。
 
 ### Shadow DOM
+
 - 用于功能封装，与主文档分开呈现，并控制其关联的功能。
 通过这种方式，您可以保持元素的功能私有，而不用担心与文档的其他部分发生冲突。
 
 ### HTML templates
+
 - `<template>` 和 `<slot>` 标签元素，可以编写不在呈现页面中显示的标记模板。
-并且它们可以做为 custom element 结构的基础被多次重用。
+  并且它们可以做为 custom element 结构的基础被多次重用。
 
 ### HTML Imports
-- 使用 custom element 最简单的重用方式是将其细节定义在单独的文件，
+
+- 使用 Custom element 最简单的重用方式是将其细节定义在单独的文件，
 然后使用导入机制将其导入到实际想使用它的页面中。
 
 实现 Web Component 的基本方法通常如下所示：
